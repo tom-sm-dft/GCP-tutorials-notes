@@ -60,4 +60,45 @@ runtime: python37
 ```
 [Configuration options for python.](https://cloud.google.com/appengine/docs/standard/python3/config/appref?hl=en-GB)
 
+## Testing your app
+
+### On cloud shell
+Cloud Shell lets you test your app before deploying to make sure that it's running as intended, just like debugging on your local machine.
+
+To test your app, first create an isolated virtual environment. This ensures that your app does not interfere with other Python applications that may be available on your system.
+```bash
+virtualenv --python python3 ~/envs/hello_world
+```
+Activate your newly created virtual environment:
+```bash
+source ~/envs/hello_world/bin/activate
+```
+Use pip to install project dependencies. This 'Hello World' app depends on the Flask microframework:
+```bash
+pip install -r requirements.txt
+```
+Finally, run your app in Cloud Shell using the Flask development server:
+```bash
+python main.py
+```
+
+### Preview your app with 'Web preview'
+Your app is now running on Cloud Shell. You can access the app by clicking the Web preview  button at the top of the Cloud Shell pane and choosing Preview on port 8080.
+
+### Terminating the preview instance
+Press Ctrl+C in cloud shell.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
