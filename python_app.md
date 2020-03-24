@@ -88,6 +88,38 @@ Your app is now running on Cloud Shell. You can access the app by clicking the W
 ### Terminating the preview instance
 Press Ctrl+C in cloud shell.
 
+## Deploying to App engine
+### Create app
+In order to deploy your app, you need to create an app in a region:
+```bash
+gcloud app create
+```
+
+### Deploying with cloud shell
+You can use Cloud Shell to deploy your app. To deploy your app, enter the following:
+```bash
+gcloud app deploy app.yaml --project dft-add-sb-tsoaresmullen
+```
+
+### Visiting the app
+Visit your app
+Congratulations! Your app has been deployed. The default URL of your app is a subdomain on appspot.com that starts with your project's ID: [dft-add-sb-tsoaresmullen.appspot.com](dft-add-sb-tsoaresmullen.appspot.com).
+Try visiting your deployed application.
+
+
+## View app's status
+Go to the app engine dashboard.
+
+## Disable application
+1. Go to App Engine settings
+2. Click Disable Application
+3. Enter application id e.g. dft-add-sb-tsoaresmullen
+
+### Delete project
+1. Go to __IAM & admin__
+2. Click manage resources.
+3. Delete.
+
 
 
 
